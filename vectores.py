@@ -27,20 +27,20 @@ class Vector:
         y = self.y * b
         z = self.z * b
         r = (x,y,z)
-        return "El resultado del primer vector multiplicado por 6 es: {}".format(r)
+        return "El resultado del primer vector multiplicado por {} es: {}".format(b,r)
     
     def divi(self,b):
         x = self.x / b
         y = self.y / b
         z = self.z / b
         r = (x,y,z)
-        return "El resultado del primer vector dividido por 8 es: {}".format(r)
+        return "El resultado del primer vector dividido por {} es: {}".format(b,r)
     
     def mostrar(self):
         print(vector1.suma(vector2))
         print(vector1.resta(vector2))
-        print(vector1.multi(6))
-        print(vector1.divi(8))
+        print(vector1.multi(g))
+        print(vector1.divi(h))
         print(vector1.prod_punto(vector2))
         print(vector1.prod_cruz(vector2))
 
@@ -58,9 +58,20 @@ class Vector:
         r = (x,-y,z)
         return "El producto cruz entre ambos vectores es: {}".format(r)
 
-vector1 = Vector(5,1,4)
-vector2 = Vector(4,5,2)
+i = int(input("Ingrese valor x del primer vector: "))
+j = int(input("Ingrese valor y del primer vector: "))
+k = int(input("Ingrese valor z del primer vector: "))
 
+vector1 = Vector(i,j,k)
+
+o = int(input("Ingrese valor x del segundo vector: "))
+p = int(input("Ingrese valor y del segundo vector: "))
+q = int(input("Ingrese valor z del segundo vector: "))
+
+vector2 = Vector(o,p,q)
+
+g = int(input("Ingrese número para multiplicar el primer vector: "))
+h = int(input("Ingrese número para dividir el primer vector: "))
 print(vector1.showvector())
 print(vector2.showvector())
 vector1.mostrar()
